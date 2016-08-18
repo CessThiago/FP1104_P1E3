@@ -29,3 +29,5 @@ funcion divide_y_venceras(problema)
       para i=1 hasta n hacer
          divide_y_venceras(subproblema_k);
       combinar las n soluciones; }
+
+Flor, Ecuación: 100-​3/​sqrt(​x^​2+​y^​2)+​sin(​sqrt(​x^​2+​y^​2))+​sqrt(​200-​x^​2+​y^​2+​10*​sin(​x)+​10*​sin(​y))/​1000
