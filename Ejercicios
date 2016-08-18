@@ -7,3 +7,25 @@ One of the gentlemanly scientists of the era was to become Ada's lifelong friend
 In 1835, Ada married William King, ten years her senior, and when King inherited a noble title in 1838, they became the Earl and Countess of Lovelace. Ada had three children. The family and its fortunes were very much directed by Lady Byron, whose domineering was rarely opposed by King.
 Ada called herself "an Analyst (& Metaphysician)," and the combination was put to use in the Notes. She understood the plans for the device as well as Babbage but was better at articulating its promise. She rightly saw it as what we would call a general-purpose computer. It was suited for "developping [sic] and tabulating any function whatever. . . the engine [is] the material expression of any indefinite function of any degree of generality and complexity." Her Notes anticipate future developments, including computer-generated music.
 Ada died of cancer in 1852, at the age of 37, and was buried beside the father she never knew. Her contributions to science were resurrected only recently, but many new biographies* attest to the fascination of Babbage's "Enchantress of Numbers."
+
+Algoritmo
+Se denomina algoritmo a un grupo finito de operaciones organizadas de manera lógica y ordenada que permite solucionar un determinado problema. Se trata de una serie de instrucciones o reglas establecidas que, por medio de una sucesión de pasos, permiten arribar a un resultado o solución.
+
+Técnica Divide y vencerás
+La técnica de diseño de algoritmos llamada "divide y vencerás" (divide and conquer) consiste en descomponer el problema original en varios sub-problemas más sencillos, para luego resolver éstos mediante un cálculo sencillo. Por último, se combinan los resultados de cada sub-problema para obtener la solución del problema original. El pseudocódigo sería:
+funcion divide_y_venceras_1(problema)
+{ descomponer el problema en n subproblemas más pequeños;
+   para i=1 hasta n hacer
+      resolver el subproblema k;
+   combinar las n soluciones;}
+Un ejemplo de "divide y vencerás" es la ordenación rápida, o quicksort, utilizada para ordenar arrays. En ella, se dividía el array en dos sub-arrays, para luego resolver cada uno por separado, y unirlos (ver algoritmos de ordenación). El ahorro de tiempo es grande: el tiempo necesario para ordenar un array de elementos mediante el método de la burbuja es cuadrático: kN2. Si dividimos el array en dos y ordenamos cada uno de ellos, el tiempo necesario para resolverlo es ahora k(N/2)2+k(N/2)2=(kN2)/2. El tiempo necesario para ordenarlo es la mitad, pero sigue siendo cuadrático.
+Pero ahora, si los subproblemas son todavía demasiado grandes, ¿por qué no utilizar la misma táctica con ellos, esto es, dividirlos a ellos también, utilizando un algoritmo recursivo (ver recursividad) que vaya dividiendo más el sub-problema hasta que su solución sea trivial? Un algoritmo del tipo:
+funcion divide_y_venceras(problema)
+{ si el problema es trivial
+      entonces resolver el problema;
+   si no es trivial }
+
+   { descomponer el problema en n subproblemas más pequeños;
+      para i=1 hasta n hacer
+         divide_y_venceras(subproblema_k);
+      combinar las n soluciones; }
